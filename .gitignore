@@ -1,0 +1,16 @@
+# Ignore everything
+
+*
+
+
+# But not these files...
+
+!.gitignore
+
+!/Assets/
+
+!/Assets/**
+
+!/ProjectSettings/
+
+!/ProjectSettings/**
