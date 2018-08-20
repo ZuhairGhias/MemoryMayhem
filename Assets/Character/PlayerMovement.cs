@@ -53,11 +53,10 @@ public class PlayerMovement : MonoBehaviour
         transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y);
         if(carryingBlock && block != null) block.transform.position = new Vector3(block.transform.position.x, block.transform.position.y, transform.position.y);
         GetComponent<Rigidbody2D>().MovePosition(new Vector2(transform.position.x + moveX, transform.position.y + moveY));
-        //gameObject.transform.Translate(moveX, moveY, 0);
 
 
         
-        if (Input.GetKeyDown("d"))
+        if (Input.GetKey("d"))
         {
             direction = "right";
             target = new Vector3(reach, 0, 0);
@@ -65,20 +64,20 @@ public class PlayerMovement : MonoBehaviour
             
             
         }
-        else if (Input.GetKeyDown("a"))
+        else if (Input.GetKey("a"))
         {
             direction = "left";
             target = new Vector3(-reach, 0, 0);
             animator.SetInteger("Direction", 2);
         }
 
-        if (Input.GetKeyDown("w"))
+        if (Input.GetKey("w"))
         {
             direction = "up";
             target = new Vector3(0, reach, 0);
             animator.SetInteger("Direction", 0);
         }
-        else if (Input.GetKeyDown("s"))
+        else if (Input.GetKey("s"))
         {
             direction = "down";
             target = new Vector3(0, -reach, 0);
